@@ -1,6 +1,7 @@
 package sui;
 
 import kha.Image;
+import kha.Canvas;
 // sui
 import sui.elements.Element;
 import sui.elements.DrawableElement;
@@ -9,9 +10,6 @@ using sui.core.utils.ArrayExt;
 
 @:structInit
 class Scene extends DrawableElement {
-	public var resolution:Int = 0;
-	public var backbuffer:Image = null;
-
 	public inline function new() {
 		super();
 	}
@@ -33,24 +31,15 @@ class Scene extends DrawableElement {
 			add(c);
 	}
 
-	override inline function resize(w:Int, h:Int) {
-		width = w;
-		height = h;
-		createBackbuffer(w, h);
-	}
-
-	public inline function createBackbuffer(w:Int, h:Int) {
-		resolution = w > h ? w : h;
-		backbuffer = Image.createRenderTarget(resolution, resolution, null, NoDepthAndStencil);
-	}
-
 	public inline function update() {};
 
-	override inline function draw(_) {
-		backbuffer.g2.begin(true, color);
+	override inline function draw(target:Canvas, ?clear:Bool = true) {
+		target.g2.begin(clear, color);
 		for (c in children)
-			if (c is DrawableElement)
-				cast(c, DrawableElement).draw(backbuffer);
-		backbuffer.g2.end();
+			if (c is DrawableElement) {
+				var drawable:DrawableElement = cast c;
+				drawable.draw(target);
+			}
+		target.g2.end();
 	}
 }

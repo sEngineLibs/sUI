@@ -21,5 +21,5 @@ class DrawableElement extends Element {
 		return opacity;
 	}
 
-	public function draw(target:Canvas) {}
+	public function draw(target:Canvas, ?clear:Bool = true) {}
 }
