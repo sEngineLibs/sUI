@@ -33,12 +33,10 @@ class SUI extends DrawableElement {
 	public inline function update() {};
 
 	override inline function render(target:Canvas, ?clear:Bool = true) {
-		target.g2.begin(clear, color);
 		for (c in children)
 			if (c is DrawableElement) {
 				var drawable:DrawableElement = cast c;
 				drawable.render(target);
 			}
-		target.g2.end();
 	}
 }

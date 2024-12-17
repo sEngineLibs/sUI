@@ -1,5 +1,6 @@
 package sui.elements;
 
+import score.Input;
 import sui.elements.Element;
 
 using score.utils.ArrayExt;
@@ -18,17 +19,17 @@ class MouseArea extends Element {
 	var _focused:Bool = false;
 	var focused:Bool;
 
-	public function new(scene:Scene) {
+	public function new(scene:SUI) {
 		super(scene);
 
-		SUI.mouse.notify(null, null, function(x:Int, y:Int, moveX:Int, moveY:Int) {
+		Input.mouse.notify(null, null, function(x:Int, y:Int, moveX:Int, moveY:Int) {
 			mouseX = x;
 			mouseY = y;
 
 			focused = (x >= left.position && x <= right.position && y >= top.position && y <= bottom.position);
 		}, null);
 
-		SUI.mouse.notify(function(button:Int, x:Int, y:Int) {
+		Input.mouse.notify(function(button:Int, x:Int, y:Int) {
 			if (focused)
 				for (f in downListeners)
 					f(button, x, y);
