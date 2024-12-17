@@ -5,7 +5,7 @@ import kha.FastFloat;
 // sui
 import sui.effects.Border;
 
-using sui.core.graphics.GraphicsExtension;
+using score.graphics.GraphicsExtension;
 
 @:structInit
 class SimpleArc extends SimpleDrawableElement {

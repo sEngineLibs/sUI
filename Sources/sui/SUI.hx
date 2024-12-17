@@ -1,15 +1,14 @@
 package sui;
 
-import kha.Image;
 import kha.Canvas;
 // sui
 import sui.elements.Element;
 import sui.elements.DrawableElement;
 
-using sui.core.utils.ArrayExt;
+using score.utils.ArrayExt;
 
 @:structInit
-class Scene extends DrawableElement {
+class SUI extends DrawableElement {
 	public inline function new() {
 		super();
 	}
@@ -33,12 +32,12 @@ class Scene extends DrawableElement {
 
 	public inline function update() {};
 
-	override inline function draw(target:Canvas, ?clear:Bool = true) {
+	override inline function render(target:Canvas, ?clear:Bool = true) {
 		target.g2.begin(clear, color);
 		for (c in children)
 			if (c is DrawableElement) {
 				var drawable:DrawableElement = cast c;
-				drawable.draw(target);
+				drawable.render(target);
 			}
 		target.g2.end();
 	}

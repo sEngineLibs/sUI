@@ -1,9 +1,9 @@
-package sui.core.graphics;
+package score.graphics;
 
-import sui.core.graphics.shaders.RectDrawer;
-import sui.core.graphics.shaders.ColorDrawer;
-import sui.core.graphics.shaders.ImageDrawer;
-import sui.core.graphics.shaders.ShadowCaster;
+import score.graphics.shaders.RectDrawer;
+import score.graphics.shaders.ColorDrawer;
+import score.graphics.shaders.ImageDrawer;
+import score.graphics.shaders.ShadowCaster;
 
 class SUIShaders {
 	public static var RectDrawer:RectDrawer = new RectDrawer();

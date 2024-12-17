@@ -177,7 +177,7 @@ class Anchors {
 }
 
 @:structInit
-@:build(sui.core.macro.SUIMacro.build())
+@:build(score.macro.SMacro.build())
 class AnchorLine {
 	@observable public var position:FastFloat = 0;
 }

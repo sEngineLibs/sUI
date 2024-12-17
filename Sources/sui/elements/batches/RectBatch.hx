@@ -5,7 +5,7 @@ import kha.arrays.Float32Array;
 import kha.graphics4.IndexBuffer;
 import kha.graphics4.VertexBuffer;
 // sui
-import sui.core.graphics.SUIShaders;
+import score.graphics.SUIShaders;
 import sui.elements.shapes.Rectangle;
 
 class RectBatch extends ElementBatch {
@@ -93,7 +93,7 @@ class RectBatch extends ElementBatch {
 		vertices.unlock();
 	}
 
-	override public inline function draw(target:Canvas) {
-		SUIShaders.RectDrawer.draw(target, vertices, indices, [rectBounds, rectAttrib, rectColors]);
+	override public inline function render(target:Canvas) {
+		SUIShaders.RectDrawer.render(target, vertices, indices, [rectBounds, rectAttrib, rectColors]);
 	}
 }

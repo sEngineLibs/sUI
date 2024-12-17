@@ -3,13 +3,13 @@ package sui.elements;
 import kha.FastFloat;
 import kha.math.FastVector2;
 // sui
+import score.utils.MathUtils;
 import sui.positioning.Anchors;
 import sui.elements.batches.ElementBatch;
-import sui.core.utils.Math.clamp;
 
-@:autoBuild(sui.core.macro.SUIMacro.build())
+@:autoBuild(score.macro.SMacro.build())
 class Element {
-	public function new(?scene:Scene) {
+	public function new(?scene:SUI) {
 		anchors = new Anchors(this);
 		if (scene != null)
 			scene.add(this);
@@ -90,7 +90,7 @@ class Element {
 	}
 
 	inline function set_width(value:FastFloat):FastFloat {
-		value = clamp(value, minWidth, maxWidth);
+		value = MathUtils.clamp(value, minWidth, maxWidth);
 		horizontalCenter.position = x + value / 2;
 		right.position = x + value;
 		return value;
@@ -101,7 +101,7 @@ class Element {
 	}
 
 	inline function set_height(value:FastFloat):FastFloat {
-		value = clamp(value, minHeight, maxHeight);
+		value = MathUtils.clamp(value, minHeight, maxHeight);
 		verticalCenter.position = y + value / 2;
 		bottom.position = y + value;
 		return value;

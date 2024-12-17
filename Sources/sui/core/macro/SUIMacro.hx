@@ -1,13 +1,13 @@
-package sui.core.macro;
+package score.macro;
 
 import haxe.macro.Context;
 import haxe.macro.Expr;
 import haxe.macro.Expr.Field;
 
-using sui.core.macro.MacroExt;
-using sui.core.utils.StringExt;
+using score.macro.MacroExt;
+using score.utils.StringExt;
 
-class SUIMacro {
+class SMacro {
 	public static function build():Array<Field> {
 		var fields:Array<Field> = Context.getBuildFields();
 		for (field in fields)

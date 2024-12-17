@@ -5,7 +5,7 @@ import kha.FastFloat;
 // sui
 import sui.elements.Element;
 import sui.layouts.Alignment;
-import sui.core.utils.String.capitalizeWords;
+import score.utils.String.capitalizeWords;
 
 @:structInit
 class Text extends Element {

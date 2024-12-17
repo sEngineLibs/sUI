@@ -1,4 +1,4 @@
-package sui.core.graphics.shaders;
+package score.graphics.shaders;
 
 import kha.Canvas;
 import kha.graphics4.VertexData;

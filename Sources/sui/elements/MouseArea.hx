@@ -2,7 +2,7 @@ package sui.elements;
 
 import sui.elements.Element;
 
-using sui.core.utils.ArrayExt;
+using score.utils.ArrayExt;
 
 class MouseArea extends Element {
 	var downListeners:Array<(button:Int, x:Int, y:Int) -> Void> = [];

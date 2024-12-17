@@ -1,4 +1,4 @@
-package sui.core.utils;
+package score.utils;
 
 class ArrayExt {
 	public static inline function last<T>(a:Array<T>):T {

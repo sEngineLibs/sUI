@@ -1,4 +1,4 @@
-package sui.core.graphics;
+package score.graphics;
 
 import kha.math.Vector2;
 import kha.math.FastVector2;
@@ -11,13 +11,13 @@ import kha.graphics2.HorTextAlignment;
  */
 /**
  * Static extension functions for Graphics2.
- * Usage: "using sui.core.graphics.GraphicsExtension;"
+ * Usage: "using score.graphics.GraphicsExtension;"
 **/
 class GraphicsExtension {
 	/**
 	 * Draws a arc.
 	 * @param	ccw (optional) Specifies whether the drawing should be counterclockwise.
-	 * @param	segments (optional) The amount of lines that should be used to draw the arc.
+	 * @param	segments (optional) The amount of lines that should be used to render the arc.
 	 */
 	public static function drawArc(g2:Graphics, cx:Float, cy:Float, radius:Float, sAngle:Float, eAngle:Float, strength:Float = 1, ccw:Bool = false,
 			segments:Int = 0):Void {
@@ -65,7 +65,7 @@ class GraphicsExtension {
 	/**
 	 * Draws a filled arc.
 	 * @param	ccw (optional) Specifies whether the drawing should be counterclockwise.
-	 * @param	segments (optional) The amount of lines that should be used to draw the arc.
+	 * @param	segments (optional) The amount of lines that should be used to render the arc.
 	 */
 	public static function fillArc(g2:Graphics, cx:Float, cy:Float, radius:Float, sAngle:Float, eAngle:Float, ccw:Bool = false, segments:Int = 0):Void {
 		#if kha_html5
@@ -111,7 +111,7 @@ class GraphicsExtension {
 
 	/**
 	 * Draws a circle.
-	 * @param	segments (optional) The amount of lines that should be used to draw the circle.
+	 * @param	segments (optional) The amount of lines that should be used to render the circle.
 	 */
 	public static function drawCircle(g2:Graphics, cx:Float, cy:Float, radius:Float, strength:Float = 1, segments:Int = 0):Void {
 		#if kha_html5
@@ -166,7 +166,7 @@ class GraphicsExtension {
 
 	/**
 	 * Draws a filled circle.
-	 * @param	segments (optional) The amount of lines that should be used to draw the circle.
+	 * @param	segments (optional) The amount of lines that should be used to render the circle.
 	 */
 	public static function fillCircle(g2:Graphics, cx:Float, cy:Float, radius:Float, segments:Int = 0):Void {
 		#if kha_html5

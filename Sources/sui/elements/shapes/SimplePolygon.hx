@@ -5,7 +5,7 @@ import kha.math.Vector2;
 // sui
 import sui.effects.Border;
 
-using sui.core.graphics.GraphicsExtension;
+using score.graphics.GraphicsExtension;
 
 @:structInit
 class Polygon extends SimpleDrawableElement {
@@ -15,7 +15,7 @@ class Polygon extends SimpleDrawableElement {
 	override inline function simpleDraw(target:Canvas) {
 		var x = left.position;
 		var y = top.position;
-		
+
 		target.g2.color = color;
 		target.g2.fillPolygon(x, y, vertices);
 		target.g2.color = border.color;

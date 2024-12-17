@@ -1,4 +1,4 @@
-package sui.core.utils;
+package score.utils;
 
 class StringExt {
 	public static inline function capitalize(word:String):String {

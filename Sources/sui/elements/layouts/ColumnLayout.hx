@@ -6,7 +6,7 @@ import sui.elements.Element;
 import sui.positioning.Alignment;
 import sui.positioning.Direction;
 
-using sui.core.utils.ArrayExt;
+using score.utils.ArrayExt;
 
 class ColumnLayout extends Element {
 	@:isVar public var spacing(default, set):FastFloat = 0.;

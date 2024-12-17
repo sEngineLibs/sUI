@@ -1,4 +1,4 @@
-package sui.core.macro;
+package score.macro;
 
 import haxe.macro.Expr;
 import haxe.macro.Context;

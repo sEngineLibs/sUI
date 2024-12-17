@@ -5,7 +5,7 @@ import kha.Canvas;
 class SimpleDrawableElement extends DrawableElement {
 	function simpleDraw(target:Canvas) {}
 
-	override inline function draw(target:Canvas) {
+	override inline function render(target:Canvas) {
 		var o = mapToGlobal(origin);
 
 		target.g2.pushTranslation(-o.x, -o.y);

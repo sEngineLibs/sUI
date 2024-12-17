@@ -3,7 +3,7 @@ package sui.elements.layouts;
 import sui.elements.Element;
 import sui.positioning.Alignment;
 
-using sui.core.utils.ArrayExt;
+using score.utils.ArrayExt;
 
 class Layout extends Element {
 	public var alignment:Alignment;
