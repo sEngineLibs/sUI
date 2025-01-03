@@ -1,4 +1,4 @@
 let project = new Project("SUI");
-project.addShaders("Shaders/**");
-project.addSources("Sources");
+project.addShaders("shaders/**");
+project.addSources("src");
 resolve(project);
