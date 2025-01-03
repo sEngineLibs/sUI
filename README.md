@@ -1,2 +1,2 @@
-# SUI
-2D engine written with [Kha](https://kha.tech/)
+# sUI
+2D UI system written with [Kha](https://kha.tech/)
